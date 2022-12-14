@@ -19,3 +19,8 @@ Route::get('/', function () {
 
 Route::get('/produtos/novo', 'ProdutosController@create');
 Route::post('/produtos/novo', 'ProdutosController@store')->name('registrar_produto');
+Route::get('/produto/ver/{id}', 'ProdutosController@show');
+Route::get('/produto/editar/{id}', 'ProdutosController@edit');
+Route::post('/produto/editar/{id}', 'ProdutosController@update')->name('atualizar_produto');
+Route::get('/produto/deletar/{id}', 'ProdutosController@delete');
+Route::post('/produto/deletar/{id}', 'ProdutosController@destroy')->name('deletar_produto');
